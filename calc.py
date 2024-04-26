@@ -1,12 +1,12 @@
 # File for Adding the features
-def addition(x, y):
-    return x + y
+def addition(number1, number2):
+    return number1 + number2
 
-def substraction(x, y):
-    return x-y
+def substraction(number1, number2):
+    return number1 - number2
 
-def multiplication(x, y):
-  return x * y
+def multiplication(number1, number2):
+  return number1 * number2
 
-def division(x, y):
+def division(number1, number2):
     return x // y
