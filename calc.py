@@ -10,3 +10,11 @@ def multiplication(number1, number2):
 
 def division(number1, number2):
     return number1 // number2
+
+def getPositiveorNegativeStatus(number):
+    if number<0:
+        positive_negative = "Negative"
+    else:
+        positive_negative ="Positve"
+
+        return f"{positive_negative}" 
