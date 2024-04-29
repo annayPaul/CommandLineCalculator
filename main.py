@@ -6,4 +6,4 @@ number2 = int(input("Enter your number"))
 operation = input("Enter a symbol")
 
 if __name__ == "__main__":
-    
+    pass
