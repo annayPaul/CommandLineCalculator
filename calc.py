@@ -49,8 +49,16 @@ def formattedOutput(number1, number2, operation):
     line1 += f"{getPositiveorNegativeStatus(number1) | getEvenOrOddStatus(number1)} {operation} {getPositiveorNegativeStatus(number2) | getEvenOrOddStatus(number2)} = {getPositiveorNegativeStatus(result) | getEvenOrOddStatus(result)}"
     return line1
 
-
-
+def parseOperator(operator_alphabet):
+    if operator_alphabet == "a":
+        return "+"
+    elif operator_alphabet == "s":
+        return "-"
+    if operator_alphabet == "d":
+        return "/"
+    elif operator_alphabet == "m":
+        return "*"
+        
 def getResult(number1, number2, operation):
     if operation == "+":
         return addition(number1, number2)
