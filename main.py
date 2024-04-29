@@ -1,9 +1,15 @@
-from calc import addition, subtraction, multiplication, division
+from calc import formattedOutput, parseOperator
 
-number1 = int(input("Enter your number"))
-number2 = int(input("Enter your number"))
+number1 = int(input("Enter your number: "))
+number2 = int(input("Enter your number: "))
 
-operation = input("Enter a symbol")
+operation = parseOperator(input("""Enter a symbol:
+a for +
+s for -
+m for X
+d for %
+"""))
 
 if __name__ == "__main__":
-    pass
+    print()
+    print(formattedOutput(number1, number2, operation))

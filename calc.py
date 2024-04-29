@@ -1,31 +1,15 @@
 # File for Adding the features
 def addition(number1, number2):
-    inputInfo=f"{getPositiveorNegativeStatus(number1)}; + {getPositiveorNegativeStatus(number2)};"
-    equation =f"{number1} + {number2}"
-    result = number1 + number2
-    outputInfo = f"{getPositiveorNegativeStatus(result)}"
-    return f"{equation} = {result}\n{inputInfo} = {outputInfo};"
+    return number1 + number2
 
 def subtraction(number1, number2):
-    inputInfo=f"{getPositiveorNegativeStatus(number1)}; + {getPositiveorNegativeStatus(number2)};"
-    equation =f"{number1} + {number2}"
-    result = number1 - number2
-    outputInfo = f"{getPositiveorNegativeStatus(result)}"
-    return f"{equation}  = {result}\n{inputInfo} = {outputInfo}" 
+    return number1 - number2
 
 def multiplication(number1, number2):
-    inputInfo=f"{getPositiveorNegativeStatus(number1)}; + {getPositiveorNegativeStatus(number2)};"
-    equation =f"{number1} + {number2}"
-    result = number1 * number2
-    outputInfo = f"{getPositiveorNegativeStatus(result)}"
-    return f"{equation}  = {result}\n{inputInfo} = {outputInfo}" 
+    return number1 * number2
 
 def division(number1, number2):
-    inputInfo=f"{getPositiveorNegativeStatus(number1)}; + {getPositiveorNegativeStatus(number2)};"
-    equation =f"{number1} + {number2}"
-    result = number1 // number2
-    outputInfo = f"{getPositiveorNegativeStatus(result)}"
-    return f"{equation}  = {result}\n{inputInfo} = {outputInfo}" 
+    return number1 // number2
 
 def getPositiveorNegativeStatus(number):
     if number<0:
@@ -45,16 +29,36 @@ def getEvenOrOddStatus(number):
 
 def formattedOutput(number1, number2, operation):
     result = getResult(number1, number2, operation)
-    line1 = f"{number1} {operation} {number2} = {result}"
-    line1 += f"{getPositiveorNegativeStatus(number1) | getEvenOrOddStatus(number1)} {operation} {getPositiveorNegativeStatus(number2) | getEvenOrOddStatus(number2)} = {getPositiveorNegativeStatus(result) | getEvenOrOddStatus(result)}"
+    line1 = f"{number1} {operation} {number2} = {result}\n"
+    line1 += f"{getPositiveorNegativeStatus(number1)} | {getEvenOrOddStatus(number1)}; {operation} {getPositiveorNegativeStatus(number2)} | {getEvenOrOddStatus(number2)}; = {getPositiveorNegativeStatus(result)} | {getEvenOrOddStatus(result)};"
     return line1
 
-
-def getReult(number1, number2, operation):
-    pass
+def parseOperator(operator_alphabet):
+    if operator_alphabet == "a":
+        return "+"
+    elif operator_alphabet == "s":
+        return "-"
+    if operator_alphabet == "d":
+        return "/"
+    elif operator_alphabet == "m":
+        return "*"
+        
+def getResult(number1, number2, operation):
+    if operation == "+":
+        return addition(number1, number2)
+    elif operation == "-":
+        return subtraction(number1, number2)
+    elif operation == "/":
+        return division(number1, number2)
+    elif operation == "*":
+        return multiplication(number1, number2)
+    
+    return "No valid operation found for the given input"
+    
+        
 
     
-print(addition(40,60))
-print(addition(41,60))
-print(addition(41,61))
-print(addition(40,67))
+# print(addition(40,60))
+# print(addition(41,60))
+# print(addition(41,61))
+# print(addition(40,67))
