@@ -50,8 +50,20 @@ def formattedOutput(number1, number2, operation):
     return line1
 
 
-def getReult(number1, number2, operation):
-    pass
+
+def getResult(number1, number2, operation):
+    if operation == "+":
+        return addition(number1, number2)
+    elif operation == "-":
+        return subtraction(number1, number2)
+    elif operation == "/":
+        return division(number1, number2)
+    elif operation == "*":
+        return multiplication(number1, number2)
+    
+    return "No valid operation found for the given input"
+    
+        
 
     
 print(addition(40,60))
