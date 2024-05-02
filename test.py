@@ -1,5 +1,5 @@
 import unittest
-from calc import addition, subtraction, multiplication, division, getEvenOrOddStatus
+from calc import addition, subtraction, multiplication, division, getEvenOrOddStatus, getPositiveorNegativeStatus
 
 class TestCalc(unittest.TestCase):
 
@@ -30,3 +30,11 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(expected, "Odd")
         expected = getEvenOrOddStatus(8)
         self.assertEqual(expected, "Even")
+    
+    def test_even_odd(self):
+        expected = getPositiveorNegativeStatus(7)
+        self.assertEqual(expected, "Positive")
+        expected = getPositiveorNegativeStatus(-8)
+        self.assertEqual(expected, "Negative")
+        expected = getPositiveorNegativeStatus(0)
+        self.assertEqual(expected, "Positive")

@@ -17,7 +17,7 @@ def getPositiveorNegativeStatus(number):
     else:
         positive_negative ="Positive"
 
-        return f"{positive_negative}" 
+    return f"{positive_negative}" 
 
 def getEvenOrOddStatus(number):
     if number % 2 == 0:
