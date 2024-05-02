@@ -15,7 +15,7 @@ def getPositiveorNegativeStatus(number):
     if number<0:
         positive_negative = "Negative"
     else:
-        positive_negative ="Positve"
+        positive_negative ="Positive"
 
         return f"{positive_negative}" 
 
