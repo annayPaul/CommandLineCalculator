@@ -1,5 +1,5 @@
 import unittest
-from calc import addition, subtraction, multiplication, division
+from calc import addition, subtraction, multiplication, division, getEvenOrOddStatus
 
 class TestCalc(unittest.TestCase):
 
@@ -23,3 +23,10 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(expected, 2)
         expected = division(10,20)
         self.assertEqual(expected,0)
+
+    
+    def test_even_odd(self):
+        expected = getEvenOrOddStatus(7)
+        self.assertEqual(expected, "Odd")
+        expected = getEvenOrOddStatus(8)
+        self.assertEqual(expected, "Even")
