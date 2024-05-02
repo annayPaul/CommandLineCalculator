@@ -57,8 +57,3 @@ def getResult(number1, number2, operation):
     
         
 
-    
-# print(addition(40,60))
-# print(addition(41,60))
-# print(addition(41,61))
-# print(addition(40,67))
