@@ -1,5 +1,5 @@
 import unittest
-from calc import addition, substraction,multiplication
+from calc import addition, subtraction, multiplication, division
 
 class TestCalc(unittest.TestCase):
 
@@ -8,9 +8,9 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(expected, 30)
 
     def test_sub(self):
-        expected = substraction(20, 10)
+        expected = subtraction(20, 10)
         self.assertEqual(expected, 10)
-        expected = substraction(-10, 10)
+        expected = subtraction(-10, 10)
         self.assertEqual(expected, -20)
 
 
@@ -22,4 +22,4 @@ class TestCalc(unittest.TestCase):
         expected = division(20,10)
         self.assertEqual(expected, 2)
         expected = division(10,20)
-        self.assertEqua(expected,0)
+        self.assertEqual(expected,0)
